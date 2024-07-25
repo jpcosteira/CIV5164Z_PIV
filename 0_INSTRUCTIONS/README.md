@@ -16,4 +16,7 @@ Frequent actions :
 launch a container / stop a container /
 https://docs.docker.com/get-started/docker_cheatsheet.pdf
 
-# Use and contribute to the huge offer of docker FOSS (Free Open Source Software) http://hub.docker.com
+### Use and contribute to the huge offer of docker FOSS (Free Open Source Software) 
+
+Docker HUB http://hub.docker.com
+Build your own image 
