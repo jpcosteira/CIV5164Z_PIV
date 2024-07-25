@@ -1,6 +1,8 @@
-Docker is the software "swiss knife" that we will use to deploy systems and code in the course. You may explore documentation about docker https://www.docker.com/101-tutorial/  or here https://docs.docker.com/get-started/
+## Preparation
 
-# Preparation
+### Docker containers
+
+Docker is a "swiss knife" that we will use to deploy systems and code in the course. You may explore documentation about docker https://www.docker.com/101-tutorial/  or here https://docs.docker.com/get-started/
 
 Docker basics will be taught in class but we recommend you define and use our working environment prior to starting the course:
 
