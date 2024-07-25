@@ -1,4 +1,4 @@
-Install Docker Desktop (Instructions)
+Install Docker Desktop (See folder 0_INSTRUCTIONS)
 
 Clone the repository https://github.com/sipg-isr/yolov8pipeline.git
 
