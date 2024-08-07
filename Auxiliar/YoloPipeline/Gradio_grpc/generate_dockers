@@ -1,0 +1,2 @@
+docker build -t yolo_grpc --build-arg SERVICE_NAME=generic_box -f docker/Dockerfile .
+docker build -t gradio_grpc --build-arg SERVICE_NAME=generic_box -f docker/Dockerfile .
