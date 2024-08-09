@@ -1,6 +1,7 @@
 
 
-To download the components from the docker archive (http://hub.docker.com) follow the instructions below. To generate local images and run the pipeline locally (or without connecting to the internet) follow the instructions in  ** Yolov8n_grpc_pipeline-main **
+## Building all components locally ##
+To generate local images and run the pipeline locally (or without connecting to the internet) follow the instructions in  ** Yolov8n_grpc_pipeline-main **
 
 ## Deploying the YOLO Pipeline pulling images from hub.docker.com
 
@@ -9,14 +10,14 @@ To download the components from the docker archive (http://hub.docker.com) follo
 $ docker compose up
 ```
 
-2- Deploying  in a server for multiple users it should be launched as a daemon
+2- Deploying the pipeline in a server for multiple users or to have it running in the background launch it as a daemon
 ```shell
 $ docker compose up -d
 ```
 
 Open a browser window and type http://localhost:7860 or http://your.server.ip.address:7860
 
-3-To stop do a CTL-C twice if running as in 1- and type 
+3-To stop do a CTL-C if running as in 1- and then type 
 
 ```shell
 $ docker compose down
