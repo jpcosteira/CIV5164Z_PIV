@@ -1,18 +1,11 @@
-Install Docker Desktop (See folder 0_INSTRUCTIONS)
+Each folder contains the code for one system or experiment. Clone the main repository, browse the folder collection and deploy it according to specific instructions. 
 
-Clone the repository https://github.com/sipg-isr/yolov8pipeline.git
-
-To run the yolo pipeline open a command window and type:
-
-```shell
-$ docker compose up
-```
-Open a browser window and type http://localhost:7860
-
-To stop do a CTL-C twice and clean the containers
-
-```shell
-$ docker container prune
-```
+All our code runs inside containers so the Docker Engine or the Docker Desktop must be installed (See folder 0_INSTRUCTIONS)
 
 
+## Contents 
+
+* **yoloPipeline**: This pipeline has two  components packed as AI4EU docker containers
+   1. An upload/display Gradio-based component for data submission and display of results
+   2. A YOLOV8 component that detects/tracks objects in images/videos
+  
