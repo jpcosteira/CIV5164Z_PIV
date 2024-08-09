@@ -5,11 +5,11 @@ services:
   # We can distinguish servers by host, defined by the service name
   # See https://docs.docker.com/compose/networking/
   gradioService:
-    image: gradio_grpc
+    image: sipgisr/gradio_grpc
     ports:
     - "7860:7860"
   yoloService:
-    image: yolo_grpc
+    image: sipgisr/yolo_grpc
   orchestrator-node:
     image: sipgisr/grpc-orchestrator:latest
     volumes: 
