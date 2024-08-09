@@ -5,7 +5,6 @@ To download the components from the docker archive (http://hub.docker.com) follo
 ## Deploying the YOLO Pipeline pulling images from hub.docker.com
 
 1- Deploying for a single session or in a personal computer. CD to the location of the docker-compose.yml file type the command in a shell
-
 ```shell
 $ docker compose up
 ```
