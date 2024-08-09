@@ -1,10 +1,10 @@
 
 
-To download the components from the docker archive (http://hub.docker.com) follow the instructions below. To generate local images and run the pipeline locally (or without connecting to the internet) follow the instructions in  * Yolov8n_grpc_pipeline-main *
+To download the components from the docker archive (http://hub.docker.com) follow the instructions below. To generate local images and run the pipeline locally (or without connecting to the internet) follow the instructions in  ** Yolov8n_grpc_pipeline-main **
 
-## Deploying the YOLO Pipeline 
+## Deploying the YOLO Pipeline pulling images from hub.docker.com
 
-1- Deploying for a single session or in a personal computer
+1- Deploying for a single session or in a personal computer. CD to the location of the docker-compose.yml file type the command in a shell
 
 ```shell
 $ docker compose up
