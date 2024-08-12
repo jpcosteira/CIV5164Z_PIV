@@ -11,12 +11,12 @@
 ```bash
     docker build -t yolo_grpc  --build-arg SERVICE_NAME=generic_box -f docker/Dockerfile .
 ```
-**Deploying for a single session or in a personal computer**. 
+**Deploying the pipeline**: cd to Yolov8n_grpc_pipeline-main and run the docker-compose.yml configuration
 ```shell
 $ docker compose up
 ```
 
-**Running in the background** (launch it as a daemon)
+**Running the pipeline in the background** (launch it as a daemon)
 ```shell
 $ docker compose up -d
 ```
