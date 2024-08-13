@@ -12,6 +12,7 @@ services:
     image: sipgisr/yolo_grpc
   orchestrator-node:
     image: sipgisr/grpc-orchestrator:latest
+    restart: on-failure
     volumes: 
     - type: bind
       source: ./Config

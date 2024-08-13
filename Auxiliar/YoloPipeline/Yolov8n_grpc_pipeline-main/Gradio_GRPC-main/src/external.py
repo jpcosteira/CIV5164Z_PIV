@@ -40,7 +40,7 @@ def display(imgfile,matfile):
         time.sleep(0.01)
 
     if ('frame_0' in MatDict) or (not mat_path.is_file()):
-        savemat(_DISPLAYDATA_PATH, MatDict)
+        savemat(_DISPLAYDATA_PATH, MatDict,do_compression=True)
     else:
         while not FileIsReady(_DISPLAYDATA_PATH):
             time.sleep(0.01)
@@ -116,4 +116,4 @@ def MatAppend(existing_data, new_data, output_path):
             existing_data[key] = value
     
     # Save the merged data into a new .mat file
-    savemat(output_path, existing_data)
+    savemat(output_path, existing_data,do_compression=True)

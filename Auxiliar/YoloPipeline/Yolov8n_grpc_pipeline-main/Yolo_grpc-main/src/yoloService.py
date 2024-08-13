@@ -168,7 +168,7 @@ def saveResultsToMat(results,franeNum):
 
 def saveBinaryMat(dic):
     #save mat file and open it as binary
-    savemat(str(list(dic)[-1])+"data.mat",dic,long_field_names=True)
+    savemat(str(list(dic)[-1])+"data.mat",dic,long_field_names=True,do_compression=True)
     with open(str(list(dic)[-1])+"data.mat", 'rb') as fp:
         bytesData = fp.read()
     os.remove(str(list(dic)[-1])+"data.mat")
