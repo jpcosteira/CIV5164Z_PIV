@@ -57,7 +57,8 @@ def gradio_GRPC_submit(inputImg,input_type):
         return
 
     if inputImg.size > 3900000 :
-        saveImg=cv2.resize(inputImg,(1280,960))
+        scale=3900000.0/float(inputImg.size)
+        saveImg=cv2.resize(inputImg,None,fx=scale,fy=scale,interpolation= cv2.INTER_LINEAR)
     else:
         saveImg=inputImg
 
