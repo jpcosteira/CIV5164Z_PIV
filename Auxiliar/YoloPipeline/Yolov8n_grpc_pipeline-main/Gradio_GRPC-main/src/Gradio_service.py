@@ -17,7 +17,7 @@ def gradio_function():
 
         with gr.Row():
             with gr.Column():
-                input_type = gr.Dropdown(choices=["Image (1080p max)", "Stream(webcam)", "Video"], label="Select Input Type")
+                input_type = gr.Dropdown(choices=["Image", "Stream", "Video"], label="Select Input Type")
 
                 with gr.Column(visible=False) as Image_input:
                     img = gr.Image(sources="upload")
