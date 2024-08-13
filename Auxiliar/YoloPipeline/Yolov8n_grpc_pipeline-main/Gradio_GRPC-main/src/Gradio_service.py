@@ -1,6 +1,7 @@
 import gradio as gr
 from scipy.io import savemat,loadmat
 import time
+import numpy as np
 import cv2
 from pathlib import Path
 
@@ -59,6 +60,10 @@ def gradio_GRPC_submit(inputImg,input_type):
     while sub_file.is_file():
             time.sleep(0.01)
 
+    # JPC - If image is bigger than 4Mb , resize it because of GRPC
+    if np.ndarray.size(inputImg)>3900000:
+        cv2.resize(inputImg,(1280,960))
+        cv2.putText(inputImg, "Image > 4M, resized to 1080p", (50,50)), fontFace = cv2.FONT_HERSHEY_COMPLEX, fontScale = 1.5, color = (250,225,100))))
     #Save file in memory so GRPC can access it
     data_dict = {'im': inputImg,'frame': 0}
     savemat(_SUBMIT_PATH, data_dict)
