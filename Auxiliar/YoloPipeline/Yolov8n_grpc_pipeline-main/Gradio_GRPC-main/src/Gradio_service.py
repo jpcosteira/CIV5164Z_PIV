@@ -57,7 +57,7 @@ def gradio_GRPC_submit(inputImg,input_type):
         return
 
     if inputImg.size > 3900000 :
-        saveImg=cv2.resize(inputImg,(1920,1080))
+        saveImg=cv2.resize(inputImg,(1280,960))
     else:
         saveImg=inputImg
 
@@ -67,7 +67,7 @@ def gradio_GRPC_submit(inputImg,input_type):
 
     #Save file in memory so GRPC can access it
     data_dict = {'im': saveImg,'frame': 0}
-    savemat(_SUBMIT_PATH, data_dict)
+    savemat(_SUBMIT_PATH, data_dict,do_compression=True)
 
     return
 
