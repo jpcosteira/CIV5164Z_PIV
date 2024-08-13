@@ -60,7 +60,7 @@ def gradio_GRPC_submit(inputImg,input_type):
     while sub_file.is_file():
             time.sleep(0.01)
 
-    # JPC - If image is bigger than 4Mb , resize it because of GRPC
+    # JPC - If image is bigger than 4Mb , resize it because of GRPC -Annotate image
     if np.ndarray.size(inputImg)>3900000:
         cv2.resize(inputImg,(1280,960))
         cv2.putText(inputImg, "Image > 4M, resized to 1080p", (50,50), fontFace = cv2.FONT_HERSHEY_COMPLEX, fontScale = 1.5, color = (250,225,100))
