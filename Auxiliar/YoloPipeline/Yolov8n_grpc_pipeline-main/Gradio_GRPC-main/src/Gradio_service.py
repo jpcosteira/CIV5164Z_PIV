@@ -1,4 +1,4 @@
-1s\simport gradio as gr
+import gradio as gr
 from scipy.io import savemat,loadmat
 import time
 import cv2
