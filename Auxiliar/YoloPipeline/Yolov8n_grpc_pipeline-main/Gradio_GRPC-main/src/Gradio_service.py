@@ -55,13 +55,18 @@ def gradio_GRPC_submit(inputImg,input_type):
     #TODO: Here is where you can add your code to change how you process Gradios inputs and how to read GRPC's saved data
     if (inputImg is None) or (input_type != "Image"):
         return
-    
+
+    if inputImg.size > 3900000 :
+        saveImg=cv2.resize(inputImg,(1920,1080))
+    else:
+        saveImg=inputImg
+
     sub_file = Path(_SUBMIT_PATH)
     while sub_file.is_file():
             time.sleep(0.01)
 
     #Save file in memory so GRPC can access it
-    data_dict = {'im': inputImg,'frame': 0}
+    data_dict = {'im': saveImg,'frame': 0}
     savemat(_SUBMIT_PATH, data_dict)
 
     return

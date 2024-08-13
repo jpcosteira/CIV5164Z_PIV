@@ -53,13 +53,13 @@ class ServiceImpl(generic_box_pb2_grpc.GenericBoxServiceServicer):
         try:
             self.__display_fn(image,matFile)
         except:
-            logging.info(f'''[ERRO NO DISPLAY]''')
+            logging.exception(f'''[ERRO NO DISPLAY]''')
             try:
                 self.__cleanup_fn("DispImg",0)
                 self.__cleanup_fn("Sub",0)
                 self.__cleanup_fn("DispMat",0)
             except:
-                loggin.info(f'''[NO FILES TO CLEANUP]''')
+                logging.exception(f'''[NO FILES TO CLEANUP]''')
 
         return generic_box_pb2.Empty()
     
