@@ -25,7 +25,7 @@ $ docker compose up -d
 
 Open a browser window and type http://localhost:7860 or http://your.server.ip.address:7860
 
-3-To stop do a CTL-C if running as in 1- and then type 
+3-To stop type (you must interrupt with  CTL-C if running as in 1- and) 
 
 ```shell
 $ docker compose down
