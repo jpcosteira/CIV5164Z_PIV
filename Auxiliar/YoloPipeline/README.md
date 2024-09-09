@@ -1,9 +1,17 @@
 
 
 ## Building all components locally ##
-To generate local images and run the pipeline locally (or without connecting to the internet) follow the instructions in  ** Yolov8n_grpc_pipeline-main **
+To generate local images and run the pipeline locally (or without connecting to the internet) follow the instructions in folder  ** Yolov8n_grpc_pipeline-main **
 
-## Deploying the YOLO Pipeline pulling images from hub.docker.com
+## Deploying the YOLO Pipeline pulling images from hub.docker.com (download and run)
+
+The commands below will fire the download of all required containers but if you want to download them prior to running the pipeline type :
+```shell
+$ docker pull sipgisr/yolo_grpc (8Gb image)
+$ docker pull sipgisr/gradio_grpc
+$ docker pull sipgisr/grpc-orchestrator
+```
+### Single command 
 
 1- Deploying for a single session or in a personal computer. CD to the location of the docker-compose.yml file type the command in a shell
 ```shell
