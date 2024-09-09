@@ -5,7 +5,7 @@ To generate local images and run the pipeline locally (or without connecting to 
 
 ## Deploying the YOLO Pipeline pulling images from hub.docker.com (download and run)
 
-The commands below will fire the download of all required containers but if you want to download them prior to running the pipeline type :
+The -Single command- below will fireup the download of all required containers, but if you want to pull them prior to running the pipeline type :
 ```shell
 $ docker pull sipgisr/yolo_grpc (8Gb image)
 $ docker pull sipgisr/gradio_grpc
