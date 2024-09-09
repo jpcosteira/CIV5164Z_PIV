@@ -7,7 +7,7 @@
 All our code runs inside containers so the Docker Engine or the Docker Desktop must be installed (See folder 0_INSTRUCTIONS)
 
 
-## Contents 
+# Contents 
 
 * ## Object Detection Using YOLOv8  
    **yoloPipeline**: This pipeline has two  components packed as AI4EU docker containers
