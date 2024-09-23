@@ -1,0 +1,21 @@
+services:
+  # By default the gRPC servers are listening at port 8061,
+  # according to AI4EU specifications.
+  # We can distinguish servers by host, defined by the service name
+  # See https://docs.docker.com/compose/networking/
+  gradioService:
+    image: sipgisr/gradio_grpc
+    ports:
+    - "7860:7860"
+  yoloService:
+    image: sipgisr/yolo_grpc
+  orchestrator-node:
+    image: sipgisr/grpc-orchestrator:latest
+    restart: on-failure
+    volumes: 
+    - type: bind
+      source: ./Config
+      target: /app/config
+    environment:
+      CONFIG_FILE: "config/config.yaml"
+    command: bash -c "/usr/bin/wait-for-all.sh config/urls.txt && java -cp '*' pipeline.orchestrator.App"
