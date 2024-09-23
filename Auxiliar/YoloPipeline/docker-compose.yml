@@ -6,10 +6,19 @@ services:
   # See https://docs.docker.com/compose/networking/
   gradioService:
     image: sipgisr/gradio_grpc
+    restart: on-failure
     ports:
     - "7860:7860"
   yoloService:
     image: sipgisr/yolo_grpc
+    restart: on-failure
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
   orchestrator-node:
     image: sipgisr/grpc-orchestrator:latest
     restart: on-failure
