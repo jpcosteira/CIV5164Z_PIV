@@ -1,0 +1,42 @@
+stages:
+  - name: "Source"
+    host: gradioService
+    port: 8061
+    method: submit
+  - name: "yoloTrack"
+    host: yoloService
+    port: 8061
+    method: track
+  - name: "yoloPlot"
+    host: yoloService
+    port: 8061
+    method: plot
+  - name: "Visualization"
+    host: gradioService
+    port: 8061
+    method: display
+links:
+  - source:
+      stage: "Source"
+    target:
+      stage: "yoloTrack"
+  - source:
+      stage: "yoloTrack"
+    target:
+      stage: "yoloPlot"
+      field: "file"
+  - source:
+      stage: "Source"
+    target:
+      stage: "yoloPlot"
+      field: "img"
+  - source:
+      stage: "yoloPlot"
+    target:
+      stage: "Visualization"
+      field: "img"
+  - source:
+      stage: "yoloTrack"
+    target:
+      stage: "Visualization"
+      field: "file"
