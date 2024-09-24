@@ -1,16 +1,16 @@
 This folder contains the modules needed to implment the project (all in docker containers) . 
 ### Yolo 
-The key component is Yolo, the most popular  object dectector that was dockerized and you can pull it from docker hub.
+The key component is Yolo, the most popular  object dectector that was dockerized. You can pull the docker image from docker hub with the command docker:
+```bash
+  docker pull sipgisr/yolo_grpc
+```
+Launch the container and "go inside it"
+```bash
+  docker exec -ti sipgisr/yolo_grpc bash
+```
+You can use yolo in "console" mode or importing the whole system as a python module. See section **Usage Examples** in the original Ultralitics webpage https://github.com/ultralytics/ultralytics/blob/main/docs/en/models/yolov8.md 
 
-In the terminal issue the command : ">docker exec -ti sipgisr/yolo_grpc bash ". Then follow the 
- section **Usage Examples** in https://github.com/ultralytics/ultralytics/blob/main/docs/en/models/yolov8.md 
+### Pre-built Yolo pipeline (recommended)
 
-### Pre-built pipeline
+We packed the full pipeline - input/process images/display/download data - with just uploading the images/videos in a webpage with a clean interface that allows downloading the results. CD to folder  Project/Yolov8_grpc_pipeline and follow the instructions 
 
-However we packed the full pipeline where you only need to upload the images/videos and all the processing will generate a file with the data.
-Check folder Yolov8_pipeline and in the terminal issue the command:
-> docker compose up
-> Open a browser window and go to http://localhost:7160
->
-> Enjoy !
-> 
