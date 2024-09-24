@@ -8,9 +8,9 @@ Launch the container and "go inside it"
 ```bash
   docker exec -ti sipgisr/yolo_grpc bash
 ```
-You can use yolo in "console" mode or importing the whole system as a python module. See section **Usage Examples** in the original Ultralitics webpage https://github.com/ultralytics/ultralytics/blob/main/docs/en/models/yolov8.md 
+You can use yolo in "console" mode or importing the whole system as a python module. See section **Usage Examples** in the original [Ultralitics webpage](https://github.com/ultralytics/ultralytics/blob/main/docs/en/models/yolov8.md) 
 
 ### Pre-built Yolo pipeline (recommended)
 
-We packed the full pipeline - input/process images/display/download data - with just uploading the images/videos in a webpage with a clean interface that allows downloading the results. CD to folder  Project/Yolov8_grpc_pipeline and follow the instructions 
+We packed the full pipeline - input/process images/display/download data - with just uploading the images/videos in a webpage with a clean interface that allows downloading the results. CD to folder  [Project/Yolov8_grpc_pipeline](https://github.com/jpcosteira/CIV5164Z/tree/main/Project/Yolov8_grpc_pipeline) and follow the instructions 
 
