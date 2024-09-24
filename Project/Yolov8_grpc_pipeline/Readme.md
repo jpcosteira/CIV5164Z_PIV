@@ -1,8 +1,5 @@
 
 
-## Building all components locally ##
-To generate local images and run the pipeline locally (or without connecting to the internet) follow the instructions in folder  ** Yolov8n_grpc_pipeline-main **
-
 ## Deploying the YOLO Pipeline pulling images from hub.docker.com (download and run)
 
 The -Single command- below will fireup the download of all required containers, but if you want to pull them prior to running the pipeline type :
@@ -30,7 +27,10 @@ Open a browser window and type http://localhost:7860 or http://your.server.ip.ad
 ```shell
 $ docker compose down
 ```
+### Results
 
+The interface will display the detected objects in the image and a .mat file with the data. You can download the file at any moment. The format is described in the [Yolo-grpc](https://github.com/jpcosteira/CIV5164Z/tree/main/Project/Yolo_grpc) folder.
 
+![Yolo Image](../../_images/supermocoila.jpeg "Yolo pipeline")
 
 
