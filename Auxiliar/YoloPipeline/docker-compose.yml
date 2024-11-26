@@ -12,13 +12,13 @@ services:
   yoloService:
     image: sipgisr/yolo_grpc
     restart: on-failure
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: 1
-              capabilities: [gpu]
+#    deploy:    - uncomment if using Nvdidia-GPU 
+#      resources:
+#        reservations:
+#          devices:
+#            - driver: nvidia
+#              count: 1
+#              capabilities: [gpu]
   orchestrator-node:
     image: sipgisr/grpc-orchestrator:latest
     restart: on-failure
